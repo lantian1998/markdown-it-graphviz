@@ -273,5 +273,6 @@ var Viz = function () {
   return Viz;
 }();
 
-export default Viz;
+// export default Viz;
+module.exports.default = Viz;
       
