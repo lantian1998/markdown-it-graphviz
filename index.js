@@ -22,6 +22,8 @@ const { render, Module } = require ('./common/full.render-changed.js');
 
 // #endregion 方式二 Code Module End
 
+const Entities = require('html-entities').AllHtmlEntities;
+
 module.exports = function markdownItGraphViz (md, options = {}) {
   // console.log(`@md`, md);
 
@@ -44,7 +46,8 @@ module.exports = function markdownItGraphViz (md, options = {}) {
 
         // #endregion 方式二 Code Module End
 
-        const $svg = viz.wrapper.render (content, { format: 'svg', engine: 'dot', files: [], images: [], yInvert: false, nop: 0 });
+        const entities = new Entities();
+        const $svg = viz.wrapper.render (entities.decode(content), { format: 'svg', engine: 'dot', files: [], images: [], yInvert: false, nop: 0 });
 
         return $svg;
       }

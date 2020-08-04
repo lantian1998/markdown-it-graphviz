@@ -165,7 +165,9 @@
     "url-loader": "^1.1.2",
     "vue-cli-plugin-commitlint": "^1.0.10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "html-entities": "^1.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/aiyoudiao/markdown-it-graphviz.git"
